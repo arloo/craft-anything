@@ -164,7 +164,9 @@ Consulta [docs/claude-code.md](docs/claude-code.md) per sapere come funziona e p
 Codex, ma non è ancora stato verificato su un'installazione reale. **GitHub Copilot** può usare la tua Copilot CLI
 installata tramite ACP: accedi separatamente con `copilot login`. **Grok Build** può usare il programma `grok`
 installato tramite ACP (`grok agent stdio`): accedi separatamente con `grok login`.
-Consulta [docs/grok.md](docs/grok.md). Puoi attivare ACP per ciascun backend anche con altri agent che lo
+Consulta [docs/grok.md](docs/grok.md). **Kimi Code CLI** può usare il programma `kimi` installato tramite
+ACP (`kimi acp`): accedi separatamente con `kimi login`; non è ancora stato eseguito in condizioni reali.
+Puoi attivare ACP per ciascun backend anche con altri agent che lo
 supportano (Gemini CLI, Qwen Code, opencode, goose, Hermes, Maki, Devin); tra questi, Maki e Devin sono stati
 eseguiti in condizioni reali (Devin si autentica con la chiave salvata nel backend: il suo accesso CLI separato
 non vale per ACP). Anthropic, OpenAI, OpenRouter, xAI (Grok, quando è impostata `XAI_API_KEY`) e i server locali
@@ -283,7 +285,6 @@ Le tabelle elencano formati e nomi dei file: controlla gli asset della release s
 |---|---|---|
 | x64 (Intel/AMD a 64 bit) | `craft-anything-<ver>-windows-x64.msi` | `craft-anything-<ver>-windows-x64-portable.zip` |
 | arm64 (Snapdragon e altri PC ARM) | `craft-anything-<ver>-windows-arm64.msi` | `craft-anything-<ver>-windows-arm64-portable.zip` |
-| x86 (32 bit) | `craft-anything-<ver>-windows-x86.msi` | `craft-anything-<ver>-windows-x86-portable.zip` |
 
 Gli installer e gli eseguibili sono code-signed. Lo zip portable conserva le impostazioni accanto all'app.
 
@@ -349,7 +350,7 @@ non eseguire il file; segnala il problema includendo l'output e il tag della rel
 | Fedora/RHEL/openSUSE | `craft-anything-<ver>-linux-x86_64.rpm` | `craft-anything-<ver>-linux-aarch64.rpm` | |
 | Tarball | `craft-anything-<ver>-linux-x86_64.tar.gz` | `craft-anything-<ver>-linux-aarch64.tar.gz` | Estraibile ovunque |
 
-RISC-V (riscv64): `craft-anything-<ver>-linux-riscv64.tar.gz`, disponibile solo come tarball.
+Le build RISC-V (riscv64) sono disponibili come `craft-anything-<ver>-linux-riscv64.tar.gz`, `craft-anything-<ver>-linux-riscv64.deb` e `craft-anything-<ver>-linux-riscv64.rpm`.
 
 L'AppImage contiene anche la CLI: esegui `<AppImage> --cli <command>` (per esempio
 `<AppImage> --cli mcp` per un client MCP), oppure crea un collegamento all'AppImage chiamato
@@ -360,6 +361,7 @@ L'AppImage contiene anche la CLI: esegui `<AppImage> --cli <command>` (per esemp
 | Build | File |
 |---|---|
 | x86_64 | `craft-anything-<ver>-freebsd-x86_64.tar.gz` |
+| aarch64 (ARM64) | `craft-anything-<ver>-freebsd-aarch64.tar.gz` |
 
 ### Web (WebAssembly)
 
